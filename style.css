@@ -25,12 +25,66 @@
     overflow-x: hidden;
 }
 
+/* go down button */
+.btn.btn-dark.scroll-button {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: fixed;
+    z-index: 99;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60px;
+    width: 150px;
+    border-radius: 60px;
+    display: block;
+    animation: 0.3s scroll-down-disappear forwards linear;
+}
+
+.btn.btn-dark.scroll-button:focus {
+    outline: none;
+}
+
+.btn.btn-dark.scroll-button p {
+    margin: 0;
+}
+
+.btn.btn-dark.scroll-button.appear {
+    animation: 0.3s scroll-down-appear forwards linear;
+}
+
+@keyframes scroll-down-appear {
+    from {
+        -webkit-transform: translate(-50%, 200px);
+    }
+    50% {
+        -webkit-transform: translate(-50%, -50px);
+    }
+    100% {
+        -webkit-transform: translate(-50%, 0px);
+    }
+}
+
+@keyframes scroll-down-disappear {
+    from {
+        -webkit-transform: translate(-50%, 0px);
+    }
+    50% {
+        -webkit-transform: translate(-50%, -50px);
+    }
+    100% {
+        -webkit-transform: translate(-50%, 200px);
+    }
+}
+
 /* back to top button */
-.btn.btn-dark {
+.btn.btn-dark.button-up {
     position: fixed;
     z-index: 99;
     top: 87%;
     left: 92%;
+    outline: none;
     display: none;
     height: 60px;
     width: 60px;
@@ -39,7 +93,11 @@
     animation: 0.3s button_disappear forwards linear;
 }
 
-.btn.btn-dark.appear {
+.btn.btn-dark.button-up:focus {
+    outline: none;
+}
+
+.btn.btn-dark.button-up.appear {
     animation: 0.3s button_appear forwards linear;
 }
 
