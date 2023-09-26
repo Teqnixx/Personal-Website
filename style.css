@@ -4,6 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.cdnfonts.com/css/school');
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 :root {
     --text-color: white;
     --font: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -11,6 +14,11 @@
     --programmer-font: 'IBM Plex Mono', monospace;
     --musician-font:'Dancing Script', cursive;
     --student-font: 'SCHOOl', sans-serif;
+    --oswald-font: 'Oswald', sans-serif;
+    --open-sans-font: 'Open Sans', sans-serif;
+
+    /* blurred bg color */
+    --blurred-bg: rgba(0, 0, 0, 0.7);;
 }
 
 * {
@@ -73,6 +81,7 @@
 /* home section */
 #home-section {
     margin-top: 70px;
+    margin-bottom: 180px;
 }
 
 #home-section p {
@@ -168,15 +177,79 @@
 }
 
 /* about me section */
-#about-me-section {
-    margin-top: 265px;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
+.about-me-paragraph {
+    color: var(--text-color);
+    font-family: var(--open-sans-font);
+    font-size: 18px;
+    padding-top: 20px;
+    padding-left: 150px;
 }
 
-#about-me-section h1 {
+#about-me-section {
+    height: 40vh;
+    background-color: var(--blurred-bg);
+}
+
+#about-me-section h1{
     color: var(--text-color);
+    font-family: var(--oswald-font);
+    font-weight: bold;
+    font-size: 80px;
+    letter-spacing: 2px;
     overflow: hidden;
-    text-align: center;
     padding-top: 50px;
+    padding-left: 150px;
+}
+
+/* hobbies section */
+#hobbies-section .col-md-2 {
+    background-color: #fff;
+    width: 350px;
+    border-radius: 10px;
+}
+
+#hobbies-section {
+    height: 100vh;
+    background-color: var(--blurred-bg);
+}
+
+.hobbies-title1 {
+    color: var(--text-color);
+    font-family: var(--oswald-font);
+    font-size: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.hobbies-words {
+    color: #000;
+    background-color: #fff;
+    font-family: var(--oswald-font);
+    font-size: 30px;
+    margin: 0;
+}
+
+.hobby-cards {
+    padding: 10px;
+}
+
+.hobby-cards .h1 {
+    color: #000;
+    font-family: var(--oswald-font);
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0;
+    overflow: hidden;
+}
+
+#hobbies-section img {
+    width: 250px;
+    padding: 30px;
+    border-radius: 40px;
+}
+
+/* skills section */
+#skills-section {
+    height: 100vh;
+    background-color: var(--blurred-bg);
 }
