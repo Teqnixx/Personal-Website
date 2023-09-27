@@ -17,65 +17,21 @@
     --oswald-font: 'Oswald', sans-serif;
     --open-sans-font: 'Open Sans', sans-serif;
 
-    /* blurred bg color */
-    --blurred-bg: rgba(0, 0, 0, 0.7);;
+    --blurred-bg: rgba(0, 0, 0, 0.3);
+    --blur: blur(5px);
+}
+
+#bg-div {
+    position: fixed;
+    z-index: -5;
+    width: 100vw;
+    height: 100vh;
+    background-image:  repeating-radial-gradient(circle at 0 0, transparent 0, #000000 20px), repeating-linear-gradient(#141414, #141414);
+    background-color: #000000;
 }
 
 * {
     overflow-x: hidden;
-}
-
-/* go down button */
-.btn.btn-dark.scroll-button {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    position: fixed;
-    z-index: 99;
-    top: 90%;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 60px;
-    width: 150px;
-    border-radius: 60px;
-    display: block;
-    animation: 0.3s scroll-down-disappear forwards linear;
-}
-
-.btn.btn-dark.scroll-button:focus {
-    outline: none;
-}
-
-.btn.btn-dark.scroll-button p {
-    margin: 0;
-}
-
-.btn.btn-dark.scroll-button.appear {
-    animation: 0.3s scroll-down-appear forwards linear;
-}
-
-@keyframes scroll-down-appear {
-    from {
-        -webkit-transform: translate(-50%, 200px);
-    }
-    50% {
-        -webkit-transform: translate(-50%, -50px);
-    }
-    100% {
-        -webkit-transform: translate(-50%, 0px);
-    }
-}
-
-@keyframes scroll-down-disappear {
-    from {
-        -webkit-transform: translate(-50%, 0px);
-    }
-    50% {
-        -webkit-transform: translate(-50%, -50px);
-    }
-    100% {
-        -webkit-transform: translate(-50%, 200px);
-    }
 }
 
 /* back to top button */
@@ -125,15 +81,6 @@
     100% {
         -webkit-transform: rotate(0deg) scale(1);
     }
-}
-
-/* image bg */
-.image-bg {
-    position: fixed;
-    width: 1920px;
-    left: 50%;
-    transform: translateX(-50.1%);
-    z-index: -1;
 }
 
 /* home section */
@@ -195,7 +142,7 @@
     font-family: var(--student-font);
 }
 
-.container span {
+.animation-item {
     display: block;
     height: 100%;
     padding-left: 15px;
@@ -209,25 +156,25 @@
 /* intro text animation */
 @keyframes swap_words {
     10% {
-        transform: translateY(-112%);
+        transform: translateY(-108%);
     }
     25% {
         transform: translateY(-100%);
     }
     35% {
-        transform: translateY(-212%);
+        transform: translateY(-208%);
     }
     50% {
         transform: translateY(-200%);
     }
     60% {
-        transform: translateY(-312%);
+        transform: translateY(-308%);
     }
     75% {
         transform: translateY(-300%);
     }
     85% {
-        transform: translateY(-412%);
+        transform: translateY(-408%);
     }
     100% {
         transform: translateY(-400%);
@@ -245,7 +192,9 @@
 
 #about-me-section {
     height: 40vh;
-    background-color: var(--blurred-bg);
+    background: var(--blurred-bg);
+    backdrop-filter: var(--blur);
+    border: 1px solid rgba(0,0,0,0.25);
 }
 
 #about-me-section h1{
@@ -260,15 +209,17 @@
 }
 
 /* hobbies section */
-#hobbies-section .col-md-2 {
+#hobbies-section .col-md-5 {
     background-color: #fff;
-    width: 350px;
+    height: 300px;
     border-radius: 10px;
 }
 
 #hobbies-section {
     height: 100vh;
-    background-color: var(--blurred-bg);
+    background: var(--blurred-bg);
+    backdrop-filter: var(--blur);
+    border: 1px solid rgba(0,0,0,0.25);
 }
 
 .hobbies-title1 {
@@ -283,31 +234,88 @@
     color: #000;
     background-color: #fff;
     font-family: var(--oswald-font);
+    font-weight: lighter;
     font-size: 30px;
     margin: 0;
 }
 
 .hobby-cards {
     padding: 10px;
+    overflow: hidden;
+}
+
+.hobby-cards span {
+    overflow: hidden;
 }
 
 .hobby-cards .h1 {
     color: #000;
     font-family: var(--oswald-font);
     font-weight: bold;
-    font-size: 50px;
+    font-size: 80px;
     margin: 0;
     overflow: hidden;
 }
 
 #hobbies-section img {
-    width: 250px;
-    padding: 30px;
-    border-radius: 40px;
+    margin-right: 20px;
+    width: 230px;
+    border-radius: 10px;
 }
 
 /* skills section */
 #skills-section {
     height: 100vh;
-    background-color: var(--blurred-bg);
+    background: var(--blurred-bg);
+    backdrop-filter: var(--blur);
+    border: 1px solid rgba(0,0,0,0.25);
+}
+
+#skills-section .col-lg-2 {
+    background-color: #fff;
+    height: 200px;
+    border-radius: 10px;
+}
+
+#skills-section img {
+    margin-right: 20px;
+    width: 120px;
+    border-radius: 10px;
+}
+
+.skills-words {
+    color: #000;
+    background-color: #fff;
+    font-family: var(--oswald-font);
+    font-weight: lighter;
+    font-size: 30px;
+    margin: 0;
+}
+
+.skills-cards {
+    padding: 10px;
+    overflow: hidden;
+}
+
+.skills-cards span {
+    align-self: self-start;
+    padding-left: 12px;
+    overflow: hidden;
+}
+
+.skills-cards .h1 {
+    color: #000;
+    font-family: var(--oswald-font);
+    font-weight: bold;
+    font-size: 80px;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* works section */
+#works-section {
+    height: 100vh;
+    background: var(--blurred-bg);
+    backdrop-filter: var(--blur);
+    border: 1px solid rgba(0,0,0,0.25);
 }

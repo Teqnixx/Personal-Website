@@ -11,19 +11,19 @@
 </head>
 <body>
 
+    <section id="navbar-section">
+
+    </section>
+    
+    <section class="background-section">
+        <div id="bg-div"></div>
+    </section>
+
     <button type="button" class="btn btn-dark button-up" id="top-button" onclick="topFunction()">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
         </svg>
     </button>
-
-    <button type="button" class="btn btn-dark scroll-button" id="scroll-down-button" onclick="scrollDown()">
-        <p>Scroll Down</p>
-    </button>
-
-    <section id="image-section">
-        <img class="image-bg" src="images/background-image.jpg" alt="">
-    </section>
 
     <section id="home-section">
         <div class="container">
@@ -32,11 +32,11 @@
                     <p style="align-self: flex-end;">HI, MY NAME IS ALLEN JAMISON</p>
                     <p>I'M A</p>
                     <div id="words">
-                        <span id="student-word">STUDENT</span>
-                        <span id="gamer-word">GAMER</span>
-                        <span id="musician-word">Musician</span>
-                        <span id="programmer-word">Programmer</span>
-                        <span id="student-word">STUDENT</span>
+                        <span class="animation-item" id="student-word">STUDENT</span>
+                        <span class="animation-item" id="gamer-word">GAMER</span>
+                        <span class="animation-item" id="musician-word">Musician</span>
+                        <span class="animation-item" id="programmer-word">Programmer</span>
+                        <span class="animation-item" id="student-word">STUDENT</span>
                     </div>
                 </div>
                 <div class="col-6 justify-content-center image-col">
@@ -44,10 +44,6 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="side-nav">
-        <!-- side navigation before entering about me section -->
     </section>
 
     <section id="about-me-section">
@@ -62,24 +58,58 @@
     </section>
 
     <section id="hobbies-section">
-        <div class="container-fluid">
+        <div class="container">
             <p class="hobbies-title1 text-center">HOBBIES</p>
             <div class="row justify-content-center">
-                <div class="col-md-2 m-3 hobby-cards">
-                    <p class="h1">01</p>
-                    <p class="hobbies-words">KEYBOARD</p>
+                <div class="col-md-5 m-3 hobby-cards">
+                    <div class="row" style="height: 100%;">
+                        <div class="col-4 p-4 pt-2">
+                            <p class="h1 align-top" style="display: flex; flex-direction: column;">01
+                                <span class="hobbies-words">KEYBOARD</span>
+                            </p>
+                        </div>
+                        <div class="col-8 d-flex m-auto justify-content-end">
+                            <img src="images/keyb.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-2 m-3 hobby-cards">
-                    <p class="h1">02</p>
-                    <p class="hobbies-words">PC</p>
+                <div class="col-md-5 m-3 hobby-cards">
+                    <div class="row" style="height: 100%;">
+                        <div class="col-4 p-4 pt-2">
+                            <p class="h1 align-top" style="display: flex; flex-direction: column;">02
+                                <span class="hobbies-words">PC</span>
+                            </p>
+                        </div>
+                        <div class="col-8 d-flex m-auto justify-content-end">
+                            <img src="images/pc.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-2 m-3 hobby-cards">
-                    <p class="h1">03</p>
-                    <p class="hobbies-words">GAMING</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-5 m-3 hobby-cards">
+                    <div class="row" style="height: 100%;">
+                        <div class="col-4 p-4 pt-2">
+                            <p class="h1 align-top" style="display: flex; flex-direction: column;">03
+                                <span class="hobbies-words">GAMING</span>
+                            </p>
+                        </div>
+                        <div class="col-8 d-flex m-auto justify-content-end">
+                            <img src="images/gaming.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-2 m-3 hobby-cards">
-                    <p class="h1">04</p>
-                    <p class="hobbies-words">MUSIC</p>
+                <div class="col-md-5 m-3 hobby-cards">
+                    <div class="row" style="height: 100%;">
+                        <div class="col-4 p-4 pt-2">
+                            <p class="h1 align-top" style="display: flex; flex-direction: column;">04
+                                <span class="hobbies-words">MUSIC</span>
+                            </p>
+                        </div>
+                        <div class="col-8 d-flex m-auto justify-content-end">
+                            <img src="images/music.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -88,12 +118,112 @@
     <section id="skills-section">
         <div class="container-fluid text-center">
             <p class="hobbies-title1">SKILLS</p>
-            <div class="programming">
-                
+            <div class="row m-5 justify-content-center">
+                <div class="col-lg-2 m-3 skills-cards">
+                    <div class="row" style="height: 100%;">
+                        <div class="col-5 p-3 pt-1">
+                            <p class="h1 align-top" style="display: flex; flex-direction: column;">01
+                                <span class="skills-words">HTML</span>
+                            </p>
+                        </div>
+                        <div class="col-7 d-flex m-auto justify-content-end">
+                            <img src="images/languages/HTML.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 m-3 skills-cards">
+                    <div class="row" style="height: 100%;">
+                        <div class="col-5 p-3 pt-1">
+                            <p class="h1 align-top" style="display: flex; flex-direction: column;">02
+                                <span class="skills-words">CSS</span>
+                            </p>
+                        </div>
+                        <div class="col-7 d-flex m-auto justify-content-end">
+                            <img src="images/languages/CSS.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 m-3 skills-cards">
+                    <div class="row" style="height: 100%;">
+                        <div class="col-5 p-3 pt-1">
+                            <p class="h1 align-top" style="display: flex; flex-direction: column;">03
+                                <span class="skills-words">JS</span>
+                            </p>
+                        </div>
+                        <div class="col-7 d-flex m-auto justify-content-end">
+                            <img src="images/languages/JS.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 m-3 skills-cards">
+                    <div class="row" style="height: 100%;">
+                        <div class="col-5 p-3 pt-1">
+                            <p class="h1 align-top" style="display: flex; flex-direction: column;">04
+                                <span class="skills-words">PHP</span>
+                            </p>
+                        </div>
+                        <div class="col-7 d-flex m-auto justify-content-end">
+                            <img src="images/languages/PHP.svg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="editing">
-                
+            <div class="row m-5 justify-content-center">
+                <div class="col-lg-2 m-3 skills-cards">
+                    <div class="row" style="height: 100%;">
+                        <div class="col-5 p-3 pt-1">
+                            <p class="h1 align-top" style="display: flex; flex-direction: column;">05
+                                <span class="skills-words">C++</span>
+                            </p>
+                        </div>
+                        <div class="col-7 d-flex m-auto justify-content-end">
+                            <img src="images/languages/CPlusPlus.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 m-3 skills-cards">
+                    <div class="row" style="height: 100%;">
+                        <div class="col-5 p-3 pt-1">
+                            <p class="h1 align-top" style="display: flex; flex-direction: column;">06
+                                <span class="skills-words">C#</span>
+                            </p>
+                        </div>
+                        <div class="col-7 d-flex m-auto justify-content-end">
+                            <img src="images/languages/CSharp.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 m-3 skills-cards">
+                    <div class="row" style="height: 100%;">
+                        <div class="col-5 p-3 pt-1">
+                            <p class="h1 align-top" style="display: flex; flex-direction: column;">07
+                                <span class="skills-words">MySQL</span>
+                            </p>
+                        </div>
+                        <div class="col-7 d-flex m-auto justify-content-end">
+                            <img src="images/languages/MySQL.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 m-3 skills-cards">
+                    <div class="row" style="height: 100%;">
+                        <div class="col-5 p-3 pt-1">
+                            <p class="h1 align-top" style="display: flex; flex-direction: column;">08
+                                <span class="skills-words">Python</span>
+                            </p>
+                        </div>
+                        <div class="col-7 d-flex m-auto justify-content-end">
+                            <img src="images/languages/Python.svg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section id="works-section">
+        <div class="container-fluid text-center">
+            <p class="hobbies-title1">WORKS</p>
         </div>
     </section>
 
