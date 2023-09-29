@@ -18,6 +18,7 @@
     --open-sans-font: 'Open Sans', sans-serif;
 
     --blurred-bg: rgba(0, 0, 0, 0.3);
+    --slight-blurred-bg: rgba(0, 0, 0, 0.1);
     --blur: blur(5px);
 }
 
@@ -187,11 +188,28 @@
     font-family: var(--open-sans-font);
     font-size: 18px;
     padding-top: 20px;
-    padding-left: 150px;
+}
+
+#about-me-section .container, #about-me-section .row{
+    height: 100%;
+}
+
+.about-me {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.batstateu-logo {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 300px;
 }
 
 #about-me-section {
-    height: 40vh;
+    height: 50vh;
     background: var(--blurred-bg);
     backdrop-filter: var(--blur);
     border: 1px solid rgba(0,0,0,0.25);
@@ -204,8 +222,6 @@
     font-size: 80px;
     letter-spacing: 2px;
     overflow: hidden;
-    padding-top: 50px;
-    padding-left: 150px;
 }
 
 /* hobbies section */
@@ -217,7 +233,7 @@
 
 #hobbies-section {
     height: 100vh;
-    background: var(--blurred-bg);
+    background: var(--slight-blurred-bg);
     backdrop-filter: var(--blur);
     border: 1px solid rgba(0,0,0,0.25);
 }
@@ -226,7 +242,7 @@
     color: var(--text-color);
     font-family: var(--oswald-font);
     font-size: 50px;
-    padding-top: 20px;
+    padding-top: 100px;
     padding-bottom: 10px;
 }
 
@@ -271,15 +287,15 @@
     border: 1px solid rgba(0,0,0,0.25);
 }
 
-#skills-section .col-lg-2 {
+#skills-section .col-xl-2 {
     background-color: #fff;
     height: 200px;
     border-radius: 10px;
 }
 
-#skills-section img {
+.skills-img {
     margin-right: 20px;
-    width: 120px;
+    width: 100px;
     border-radius: 10px;
 }
 
@@ -289,17 +305,15 @@
     font-family: var(--oswald-font);
     font-weight: lighter;
     font-size: 30px;
+    padding: 0;
     margin: 0;
 }
 
 .skills-cards {
-    padding: 10px;
     overflow: hidden;
 }
 
 .skills-cards span {
-    align-self: self-start;
-    padding-left: 12px;
     overflow: hidden;
 }
 
@@ -315,7 +329,60 @@
 /* works section */
 #works-section {
     height: 100vh;
-    background: var(--blurred-bg);
+    background: var(--slight-blurred-bg);
     backdrop-filter: var(--blur);
     border: 1px solid rgba(0,0,0,0.25);
+}
+
+.work-words {
+    color: #000;
+    background-color: #fff;
+    font-family: var(--oswald-font);
+    font-weight: lighter;
+    font-size: 30px;
+    margin: 0;
+}
+
+#works-section .col-10 {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    height: 610px;
+    overflow: hidden;
+}
+
+.language-icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 0;
+    height: 80px;
+}
+
+.works-img {
+    height: 500px;
+}
+
+#works-section h1 {
+    font-family: var(--oswald-font);
+    font-weight: bold;
+    font-size: 50px;
+    color: #000;
+    overflow: hidden;
+}
+
+#works-section .col-6 {
+    font-family: var(--oswald-font);
+    font-size: 30px;
+    color: #000;
+    overflow: hidden;
+}
+
+.prev-button {
+    margin-right: 50%;
+    color: #fff;
+}
+
+.next-button {
+    margin-right: -50%;
+    color: #fff;
 }
