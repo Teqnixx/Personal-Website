@@ -1,3 +1,7 @@
+window.onbeforeunload = () => {
+    window.scrollTo(0, 0);
+}
+
 window.onscroll = function() {
     scrollFunction();
     socialsReveal();
