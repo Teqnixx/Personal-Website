@@ -22,6 +22,10 @@
     --blur: blur(5px);
 }
 
+* {
+    overflow-x: hidden;
+}
+
 #bg-div {
     position: fixed;
     z-index: -5;
@@ -29,10 +33,6 @@
     height: 100vh;
     background-image:  repeating-radial-gradient(circle at 0 0, transparent 0, #000000 20px), repeating-linear-gradient(#141414, #141414);
     background-color: #000000;
-}
-
-* {
-    overflow-x: hidden;
 }
 
 /* back to top button */
@@ -201,10 +201,6 @@
 }
 
 .batstateu-logo {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
     width: 300px;
 }
 
@@ -218,6 +214,7 @@
 #about-me-section h1{
     color: var(--text-color);
     font-family: var(--oswald-font);
+    width: max-content;
     font-weight: bold;
     font-size: 80px;
     letter-spacing: 2px;
@@ -242,7 +239,7 @@
     color: var(--text-color);
     font-family: var(--oswald-font);
     font-size: 50px;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 10px;
 }
 
@@ -282,6 +279,7 @@
 /* skills section */
 #skills-section {
     height: 100vh;
+    overflow: hidden;
     background: var(--blurred-bg);
     backdrop-filter: var(--blur);
     border: 1px solid rgba(0,0,0,0.25);
@@ -385,4 +383,138 @@
 .next-button {
     margin-right: -50%;
     color: #fff;
+}
+
+/* contact me section */
+#contact-me {
+    height: 20vh;
+    background-color: #000;
+}
+
+#contact-me * {
+    overflow: hidden;
+}
+
+.main-row {
+    height: 100%;
+}
+
+#contact-me .container-fluid {
+    padding: 2% 10% 2% 10%;
+    height: 100%;
+    max-width: 100%;
+}
+
+#contact-me img {
+    width: 80px;
+    padding: 10px;
+    color: white;
+}
+
+#contact-me a {
+    text-decoration: none;
+}
+
+#email-link {
+    padding-left: 20px;
+    text-decoration: none;
+    width: fit-content;
+    color: var(--text-color);
+    font-family: var(--open-sans-font);
+}
+
+.social-title {
+    padding-left: 30px;
+    overflow: hidden;
+    color: var(--text-color);
+    font-family: var(--oswald-font);
+    font-weight: bold;
+    font-size: 80px;
+    letter-spacing: 3px;
+    transform: translateX(-400px);
+}
+
+.social-title.appear {
+    animation: social_title_reveal 0.5s forwards ease-out;
+}
+
+@keyframes social_title_reveal {
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+/* socials logo animation */
+#github-logo {
+    transform: translateY(-100px);
+}
+
+#fb-logo {
+    transform: translateY(-100px);
+}
+
+#twitter-logo {
+    transform: translateY(-100px);
+}
+
+#insta-logo {
+    transform: translateY(-100px);
+}
+
+#email-link {
+    transform: translateY(50px);
+}
+
+.github.appear {
+    animation: github_appear 0.5s forwards;
+}
+
+.fb.appear {
+    animation: fb_appear 0.5s forwards;
+    animation-delay: 0.06s;
+}
+
+.twitter.appear {
+    animation: twitter_appear 0.5s forwards;
+    animation-delay: 0.08s;
+}
+
+.insta.appear {
+    animation: insta_appear 0.5s forwards;
+    animation-delay: 0.1s;
+}
+
+.email.appear {
+    animation: email_appear 0.5s forwards;
+    animation-delay: 0.12s;
+}
+
+@keyframes github_appear {
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fb_appear {
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes twitter_appear {
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes insta_appear {
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes email_appear {
+    100% {
+        transform: translateY(0px);
+    }
 }
