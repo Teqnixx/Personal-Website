@@ -1,6 +1,7 @@
 window.onscroll = function() {
     scrollFunction();
     socialsReveal();
+    cardFlip();
 };
 
 function scrollFunction() {
@@ -23,6 +24,27 @@ function socialsReveal() {
         document.getElementById('twitter-logo').classList.add('appear');
         document.getElementById('insta-logo').classList.add('appear');
         document.getElementById('email-link').classList.add('appear');
+    }
+}
+
+function cardFlip() {
+    if (document.documentElement.scrollTop > 1700){
+        document.getElementById('card-1').classList.add('flip');
+        document.getElementById('card-2').classList.add('flip');
+        document.getElementById('card-3').classList.add('flip');
+        document.getElementById('card-4').classList.add('flip');
+    }
+    if(document.documentElement.scrollTop > 1850){
+        document.getElementById('card-5').classList.add('flip');
+        document.getElementById('card-6').classList.add('flip');
+        document.getElementById('card-7').classList.add('flip');
+        document.getElementById('card-8').classList.add('flip');
+    }
+    if(document.documentElement.scrollTop > 2000){
+        document.getElementById('card-9').classList.add('flip');
+        document.getElementById('card-10').classList.add('flip');
+        document.getElementById('card-11').classList.add('flip');
+        document.getElementById('card-12').classList.add('flip');
     }
 }
 

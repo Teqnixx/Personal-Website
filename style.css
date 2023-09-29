@@ -273,7 +273,7 @@
 #hobbies-section img {
     margin-right: 20px;
     width: 230px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 /* skills section */
@@ -293,8 +293,10 @@
 
 .skills-img {
     margin-right: 20px;
+    padding: 10px 0px 10px 0px;
     width: 100px;
     border-radius: 10px;
+    filter: drop-shadow(2px 2px 1px #000000);
 }
 
 .skills-words {
@@ -309,6 +311,9 @@
 
 .skills-cards {
     overflow: hidden;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    transform: rotateY(-90deg) skewY(5deg);
 }
 
 .skills-cards span {
@@ -517,4 +522,69 @@
     100% {
         transform: translateY(0px);
     }
+}
+
+/* flip skills cards */
+.card-1.flip {
+    transform: rotateY(0deg);
+}
+
+.card-2.flip {
+    transform: rotateY(0deg);
+    transition-delay: 0.08s;
+}
+
+.card-3.flip {
+    transform: rotateY(0deg);
+    transition-delay: 0.12s;
+}
+
+.card-4.flip {
+    transform: rotateY(0deg);
+    transition-delay: 0.16s;
+}
+
+.card-5.flip {
+    transform: rotateY(0deg);
+    transition-delay: 0.20s;
+}
+
+.card-6.flip {
+    transform: rotateY(0deg);
+    transition-delay: 0.24s;
+}
+
+.card-7.flip {
+    transform: rotateY(0deg);
+    transition-delay: 0.28s;
+}
+
+.card-8.flip {
+    transform: rotateY(0deg);
+    transition-delay: 0.32s;
+}
+
+.card-9.flip {
+    transform: rotateY(0deg);
+    transition-delay: 0.36s;
+}
+
+.card-10.flip {
+    transform: rotateY(0deg);
+    transition-delay: 0.40s;
+}
+
+.card-11.flip {
+    transform: rotateY(0deg);
+    transition-delay: 0.44s;
+}
+
+.card-12.flip {
+    transform: rotateY(0deg);
+    transition-delay: 0.48s;
+}
+
+.card-12.flip {
+    transform: rotateY(0deg);
+    transition-delay: 0.52s;
 }
