@@ -1,7 +1,3 @@
-window.onbeforeunload = () => {
-    window.scrollTo(0, 0);
-}
-
 window.onscroll = function() {
     scrollFunction();
     socialsReveal();
@@ -32,19 +28,19 @@ function socialsReveal() {
 }
 
 function cardFlip() {
-    if (document.documentElement.scrollTop > 1700){
+    if (document.documentElement.scrollTop > 1800){
         document.getElementById('card-1').classList.add('flip');
         document.getElementById('card-2').classList.add('flip');
         document.getElementById('card-3').classList.add('flip');
         document.getElementById('card-4').classList.add('flip');
     }
-    if(document.documentElement.scrollTop > 1850){
+    if(document.documentElement.scrollTop > 1950){
         document.getElementById('card-5').classList.add('flip');
         document.getElementById('card-6').classList.add('flip');
         document.getElementById('card-7').classList.add('flip');
         document.getElementById('card-8').classList.add('flip');
     }
-    if(document.documentElement.scrollTop > 2000){
+    if(document.documentElement.scrollTop > 2100){
         document.getElementById('card-9').classList.add('flip');
         document.getElementById('card-10').classList.add('flip');
         document.getElementById('card-11').classList.add('flip');
