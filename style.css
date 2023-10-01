@@ -278,55 +278,57 @@
 
 /* skills section */
 #skills-section {
-    height: 100vh;
-    overflow: hidden;
+    height: max-content;
     background: var(--blurred-bg);
     backdrop-filter: var(--blur);
-    border: 1px solid rgba(0,0,0,0.25);
 }
 
-#skills-section .col-xl-2 {
-    background-color: #fff;
-    height: 200px;
-    border-radius: 10px;
-}
-
-.skills-img {
-    margin-right: 20px;
-    padding: 10px 0px 10px 0px;
-    width: 100px;
-    border-radius: 10px;
-    filter: drop-shadow(2px 2px 1px #000000);
-}
-
-.skills-words {
-    color: #000;
-    background-color: #fff;
+.skills-title {
+    color: #FFF;
     font-family: var(--oswald-font);
-    font-weight: lighter;
-    font-size: 30px;
-    padding: 0;
-    margin: 0;
+    padding-top: 50px;
+    font-size: 50px;
+}
+
+#skills-section .row {
+    height: max-content;
 }
 
 .skills-cards {
-    overflow: hidden;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    transform: rotateY(-90deg) skewY(5deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F8;
+    min-width: 500px;
+    height: 280px;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 24px;
 }
 
-.skills-cards span {
-    overflow: hidden;
+.skill-image {
+    width: 60px;
+    height: max-content;
+    filter: drop-shadow(1px 1px 1px #000000);
 }
 
-.skills-cards .h1 {
-    color: #000;
+.skill-card-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.skill-card-title {
     font-family: var(--oswald-font);
+    font-size: 30px;
     font-weight: bold;
-    font-size: 80px;
-    margin: 0;
-    overflow: hidden;
+}
+
+.skill-card-description {
+    font-family: var(--open-sans-font);
+    font-size: 15px;
 }
 
 /* works section */
@@ -525,6 +527,7 @@
 }
 
 /* flip skills cards */
+/* useless */
 .card-1.flip {
     transform: rotateY(0deg);
 }
