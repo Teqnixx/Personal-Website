@@ -15,8 +15,6 @@ function scrollFunction() {
 
 function socialsReveal() {
     if (document.documentElement.scrollTop > 3500){
-        document.getElementById('social-h1').classList.add('appear');
-        document.getElementById('underline').classList.add('appear');
         document.getElementById('github-logo').classList.add('appear');
         document.getElementById('fb-logo').classList.add('appear');
         document.getElementById('twitter-logo').classList.add('appear');

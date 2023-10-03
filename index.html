@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
     <title>Personal Website</title>
@@ -13,7 +13,7 @@
 
     <nav class="navbar navbar-expand-lg">
         <div class="navbar-toggler button-container" id="hamburger-button" onclick="this.classList.toggle('active')" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 200 200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 200 200">
                 <g stroke-width="6.5" stroke-linecap="round">
                     <path d="M72 82.286h28.75" fill="#fff" stroke="#fff"/>
                     <path d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554" fill="none" stroke="#fff"/>
@@ -60,8 +60,11 @@
 
     <section id="home-section">
         <div class="container">
-            <div class="row">
-                <div class="col-6 name-col">
+            <div class="row justify-content-md-center justify-content-lg-center">    
+                <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12 col-12 justify-content-center image-col">
+                    <img src="images/intro-image.png" width="500px" alt="">
+                </div>
+                <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12 col-12 name-col">
                     <p style="align-self: flex-end;">HI, MY NAME IS ALLEN JAMISON</p>
                     <p>I'M A</p>
                     <div id="words">
@@ -72,28 +75,25 @@
                         <span class="animation-item" id="student-word">STUDENT</span>
                     </div>
                 </div>
-                <div class="col-6 justify-content-center image-col">
-                    <img src="images/intro-image.png" width="500px" alt="">
-                </div>
             </div>
         </div>
     </section>
 
     <section id="about-me-section">
         <div class="container">
-            <div class="row">
-                <div class="col-6">
+            <div class="row justify-content-md-center">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-8">
                     <div class="about-me">
                         <h1>ABOUT ME</h1>
                         <p class="about-me-paragraph">
-                            Hi, I'm Allen Jamison B. Mendoza.<br>
-                            Student of BS in Information Technology major in Business Analytics at <br> Batangas State University.<br>
+                            Hi, I'm Allen Jamison B. Mendoza.
+                            Student of BS in Information Technology major in Business Analytics at Batangas State University.<br>
                             Living in Talangan, Nasugbu, Batangas
                         </p>
                     </div>
                 </div>
-                <div class="col-6 d-flex m-auto justify-content-end">
-                    <img class="batstateu-logo" src="images/Batangas_State_Logo.png" alt="">
+                <div class="col-md-6 col-12 d-flex justify-content-center justify-content-md-end">
+                    <img class="batstateu-logo pt-sm-5 pt-md-0" src="images/Batangas_State_Logo.png" alt="">
                 </div>
             </div>
         </div>
@@ -173,13 +173,14 @@
                             <img class="skill-image" src="images/skills/HTML.svg" alt="">
                             <img class="skill-image" src="images/skills/CSS.svg" alt="">
                             <img class="skill-image" src="images/skills/JS.svg" alt="">
+                            <img class="skill-image" src="images/skills/PHP.svg" alt="">
                             <img class="skill-image" src="images/skills/Bootstrap.svg" alt="">
                         </div>
                         <div class="text-center">
                             <p class="skill-card-title">Web Development</p>
                         </div>
                         <div class="text-center">
-                            <p class="skill-card-description">HTML, CSS, Javascript, and Bootstrap is what I use for web development.</p>
+                            <p class="skill-card-description">This is the languages I use for web development.</p>
                         </div>
                     </div>
                 </div>
@@ -341,31 +342,33 @@
         </div>
     </section>
 
-    <section id="contact-me">
-        <div class="container-fluid">
-            <div class="row main-row">
-                <div class="col-4">
-                    <h1 id="social-h1" class="social-title">SOCIALS</h1>
-                    <div id="underline" class="social-underline"></div>
-                </div>
-                <div class="col-8">
-                    <div class="row">
-                        <div class="col-10">
-                            <a href="https://github.com/Teqnixx">
-                                <img id="github-logo" class="github" src="images/contact/github-white.svg" alt="">
-                            </a>
-                            <a href="https://www.facebook.com/ajbmendoza27">
-                                <img id="fb-logo" class="fb" src="images/contact/fb.svg" alt="">
-                            </a>
-                            <a href="https://www.instagram.com/allenjamison_/">
-                                <img id="twitter-logo" class="twitter" src="images/contact/twitter.svg" alt="">
-                            </a>
-                            <a href="https://twitter.com/allen_jamison27">
-                                <img id="insta-logo" class="insta" src="images/contact/insta.svg" alt="">
-                            </a>
-                        </div>
-                        <p id="email-link" class="email">allenjamison027@gmail.com</p>
+    <section id="contact-me-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-6">
+                    <div class="contact-me">
+                        <h1>SOCIALS</h1>
                     </div>
+                    <div class="contact-me-images">
+                        <a href="https://github.com/Teqnixx">
+                            <img id="github-logo" class="github" src="images/contact/github-white.svg" alt="">
+                        </a>
+                        <a href="https://www.facebook.com/ajbmendoza27">
+                            <img id="fb-logo" class="fb" src="images/contact/fb.svg" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/allenjamison_/">
+                            <img id="twitter-logo" class="twitter" src="images/contact/twitter.svg" alt="">
+                        </a>
+                        <a href="https://twitter.com/allen_jamison27">
+                            <img id="insta-logo" class="insta" src="images/contact/insta.svg" alt="">
+                        </a>
+                    </div>
+                    <p id="email-link" class="email">allenjamison027@gmail.com</p>
+                </div>
+                <div class="col-xxl-6">
+                    <form action="">
+                        
+                    </form>
                 </div>
             </div>
         </div>

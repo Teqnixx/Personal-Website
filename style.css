@@ -73,6 +73,7 @@
 
 .button-container {
     overflow: hidden;
+    border: none;
 	padding: 0;
 	cursor: pointer;
 	display: flex;
@@ -132,8 +133,8 @@ path:nth-child(6) {
 .btn.btn-dark.button-up {
     position: fixed;
     z-index: 99;
-    top: 87%;
-    left: 92%;
+    bottom: 50px;
+    right: 60px;
     outline: none;
     display: none;
     height: 60px;
@@ -179,8 +180,7 @@ path:nth-child(6) {
 
 /* home section */
 #home-section {
-    margin-top: 70px;
-    margin-bottom: 180px;
+    margin-top: 40px;
 }
 
 #home-section p {
@@ -195,7 +195,7 @@ path:nth-child(6) {
 
 #home-section > .container {
     margin-top: 100px;
-    height: 600px;
+    height: max-content;
 }
 
 #home-section .name-col {
@@ -206,7 +206,8 @@ path:nth-child(6) {
 }
 
 #home-section .image-col {
-    height: 600px;
+    height: max-content;
+    padding: 20px 0 20px 0;
     display: flex;
     align-items: center;
 }
@@ -287,18 +288,14 @@ path:nth-child(6) {
     height: 100%;
 }
 
-.about-me {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 .batstateu-logo {
     width: 300px;
+    min-width: 200px;
 }
 
 #about-me-section {
-    height: 50vh;
+    height: max-content;
+    padding: 80px 0 80px 0;
     background: var(--blurred-bg);
     backdrop-filter: var(--blur);
     border: 1px solid rgba(0,0,0,0.25);
@@ -322,7 +319,7 @@ path:nth-child(6) {
 }
 
 #hobbies-section {
-    height: 100vh;
+    height: max-content;
     background: var(--slight-blurred-bg);
     backdrop-filter: var(--blur);
     border: 1px solid rgba(0,0,0,0.25);
@@ -392,15 +389,17 @@ path:nth-child(6) {
     justify-content: center;
     align-items: center;
     background-color: #F2F2F8;
-    min-width: 500px;
+    min-width: 250px;
     height: 280px;
     margin: 30px;
     padding: 20px;
     border-radius: 24px;
+    overflow: hidden;
 }
 
 .skill-image {
     width: 60px;
+    min-width: 30px;
     height: max-content;
     filter: drop-shadow(1px 1px 1px #000000);
 }
@@ -486,12 +485,27 @@ path:nth-child(6) {
 }
 
 /* contact me section */
-#contact-me {
-    height: 20vh;
+#contact-me-section h1{
+    color: var(--text-color);
+    font-family: var(--oswald-font);
+    width: max-content;
+    margin: 0;
+    padding-bottom: 40px;
+    font-weight: bold;
+    font-size: 80px;
+    letter-spacing: 2px;
+    overflow: hidden;
+}
+
+#contact-me-section {
+    padding: 50px 0 50px 0;
+    display: flex;
+    align-items: center;
+    height: max-content;
     background-color: #000;
 }
 
-#contact-me * {
+#contact-me-section * {
     overflow: hidden;
 }
 
@@ -499,49 +513,29 @@ path:nth-child(6) {
     height: 100%;
 }
 
-#contact-me .container-fluid {
-    padding: 2% 10% 2% 10%;
-    height: 100%;
+#contact-me-section .container {
+    padding: 0 10% 0 10%;
+    height: max-content;
     max-width: 100%;
 }
 
-#contact-me img {
-    width: 80px;
+#contact-me-section img {
+    width: 50px;
     padding: 10px;
     color: white;
 }
 
-#contact-me a {
+#contact-me-section a {
     text-decoration: none;
 }
 
 #email-link {
-    padding-left: 20px;
+    padding-left: 10px;
+    margin: 0;
     text-decoration: none;
     width: fit-content;
     color: var(--text-color);
     font-family: var(--open-sans-font);
-}
-
-.social-title {
-    padding-left: 30px;
-    overflow: hidden;
-    color: var(--text-color);
-    font-family: var(--oswald-font);
-    font-weight: bold;
-    font-size: 80px;
-    letter-spacing: 3px;
-    transform: translateX(-400px);
-}
-
-.social-title.appear {
-    animation: social_title_reveal 0.5s forwards ease-out;
-}
-
-@keyframes social_title_reveal {
-    100% {
-        transform: translateX(0px);
-    }
 }
 
 /* socials logo animation */
@@ -617,70 +611,4 @@ path:nth-child(6) {
     100% {
         transform: translateY(0px);
     }
-}
-
-/* flip skills cards */
-/* useless */
-.card-1.flip {
-    transform: rotateY(0deg);
-}
-
-.card-2.flip {
-    transform: rotateY(0deg);
-    transition-delay: 0.08s;
-}
-
-.card-3.flip {
-    transform: rotateY(0deg);
-    transition-delay: 0.12s;
-}
-
-.card-4.flip {
-    transform: rotateY(0deg);
-    transition-delay: 0.16s;
-}
-
-.card-5.flip {
-    transform: rotateY(0deg);
-    transition-delay: 0.20s;
-}
-
-.card-6.flip {
-    transform: rotateY(0deg);
-    transition-delay: 0.24s;
-}
-
-.card-7.flip {
-    transform: rotateY(0deg);
-    transition-delay: 0.28s;
-}
-
-.card-8.flip {
-    transform: rotateY(0deg);
-    transition-delay: 0.32s;
-}
-
-.card-9.flip {
-    transform: rotateY(0deg);
-    transition-delay: 0.36s;
-}
-
-.card-10.flip {
-    transform: rotateY(0deg);
-    transition-delay: 0.40s;
-}
-
-.card-11.flip {
-    transform: rotateY(0deg);
-    transition-delay: 0.44s;
-}
-
-.card-12.flip {
-    transform: rotateY(0deg);
-    transition-delay: 0.48s;
-}
-
-.card-12.flip {
-    transform: rotateY(0deg);
-    transition-delay: 0.52s;
 }
