@@ -53,7 +53,7 @@
     </section>
 
     <button type="button" class="btn btn-dark button-up" id="top-button" onclick="topFunction()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+        <svg id="button-up" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
         </svg>
     </button>
@@ -81,7 +81,7 @@
 
     <section id="about-me-section">
         <div class="container">
-            <div class="row justify-content-md-center">
+            <div class="row justify-content-md-center my-5">
                 <div class="col-md-6 col-lg-6 col-sm-12 col-12">
                     <div class="about-me">
                         <h1>ABOUT ME</h1>
@@ -96,17 +96,66 @@
                     <img class="batstateu-logo pt-sm-5 pt-md-0" src="images/Batangas_State_Logo.png" alt="">
                 </div>
             </div>
-
+        </div>
+        
+        <div class="container-fluid px-5">
             <!-- profile -->
-            
             <div class="row">
+                <h1 id="profile" class="profile-title text-center">PROFILE</h1>
+                <div class="col-5 d-flex justify-content-end" style="padding: 0; ">
+                    <img class="profile-photo" src="images/profile-photo.jpg" alt="">
+                </div>
+                <div class="col-7">
+                    <ul class="profile">
+                        <li class="profile-item">Name : Allen Jamison B. Mendoza</li>
+                        <li class="profile-item">Birthday : April 27, 2003</li>
+                        <li class="profile-item">Age : 20</li>
+                    </ul>
+                </div>
+            </div>
 
+            <!-- educational background -->
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 id="educational-title" class="education-title">EDUCATIONAL BACKGROUND</h1>
+                    <ul class="school-list">
+                        <li class="h4 school-item">Nasugbu West Central School</li>
+                        <li class="school-item">Nasugbu, Batangas</li>
+                        <li class="school-item">Grade 1 - 5 (2008 - 2013)</li>
+                        <br>
+                        <li class="h4 school-item">San Jose Elementary School</li>
+                        <li class="school-item">Montalban, Rizal</li>
+                        <li class="school-item">Grade 6 (2013 - 2014)</li>
+                        <br>
+                        <li class="h4 school-item">San Jose National High School</li>
+                        <li class="school-item">Montalban, Rizal</li>
+                        <li class="school-item">Grade 7 - 8 (2014 - 2016)</li>
+                        <br>
+                        <li class="h4 school-item">Dr. Crisogono B. Ermita Sr. Memorial National High School</li>
+                        <li class="school-item">Nasugbu, Batangas</li>
+                        <li class="school-item">Grade 9 - 10 (2016 - 2018)</li>
+                        <br>
+                        <li class="h4 school-item">Pantalan Senior High School</li>
+                        <li class="school-item">Nasugbu, Batangas</li>
+                        <li class="school-item">Grade 11 - 12 (2018 - 2021)</li>
+                        <br>
+                        <li class="h4 school-item">Batangas State University The National Engineering University</li>
+                        <li class="school-item">Nasugbu, Batangas</li>
+                        <li class="school-item">3rd Year (2021 - Present)</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h1 id="certificate-title" class="education-title">CERTIFICATES</h1>
+                    <div class="certificates">
+                        <img class="certificate-item" src="images/certificates/HTML_certificate.jpg" alt="">
+                        <img class="certificate-item" src="images/certificates/CSS_certificate.jpg" alt="">
+                        <img class="certificate-item" src="images/certificates/Databases_Certificate.jpg" alt="">
+                        <img class="certificate-item" src="images/certificates/English_for_IT_1.jpg" alt="">
+                        <img class="certificate-item" src="images/certificates/English_for_IT_2.jpg" alt="">
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-
-    <section id="education-section">
-        
     </section>
 
     <section id="hobbies-section">

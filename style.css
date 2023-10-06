@@ -141,6 +141,8 @@ path:nth-child(6) {
 
 /* back to top button */
 .btn.btn-dark.button-up {
+    display: grid;
+    place-content: center;
     position: fixed;
     z-index: 99;
     bottom: 50px;
@@ -387,6 +389,142 @@ path:nth-child(6) {
     font-size: 80px;
     letter-spacing: 2px;
     overflow: hidden;
+}
+
+/* profile */
+.profile-title {
+    font-size: 50px !important;
+    font-weight: normal !important;
+    padding: 100px 0 20px 0;
+}
+
+.profile-photo {
+    width: auto;
+    height: 300px;
+}
+
+.profile-item {
+    color: var(--text-color);
+    font-family: var(--open-sans-font);
+    font-size: 20px;
+}
+
+/* educational background */
+.education-title {
+    font-size: 50px !important;
+    font-weight: normal !important;
+    padding: 100px 0 20px 0;
+}
+
+.h4.school-item {
+    color: var(--text-color);
+    font-family: var(--open-sans-font);
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.school-item {
+    color: var(--text-color);
+    font-family: var(--open-sans-font);
+}
+
+.certificate-item {
+    height: auto;
+    width: 300px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .profile-photo {
+        width: auto;
+        height: 200px;
+    }
+
+    .school-item {
+        font-size: 15px;
+    }
+
+    .certificate-item {
+        height: auto;
+        width: 300px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .certificate-item {
+        height: auto;
+        width: 250px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .profile-photo {
+        width: auto;
+        height: 150px;
+    }
+
+    .profile-item {
+        color: var(--text-color);
+        font-family: var(--open-sans-font);
+        font-size: 15px;
+    }
+    
+    #profile.profile-title {
+        font-size: 30px !important;
+    }
+
+    #educational-title.education-title {
+        font-size: 30px !important;
+    }
+    
+    #certificate-title.education-title {
+        font-size: 30px !important;
+    }
+
+    .education-title {
+        font-size: 10px;
+        font-weight: normal;
+        padding: 100px 0 20px 0;
+    }
+
+    .certificate-item {
+        height: auto;
+        width: 300px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .profile-photo {
+        width: auto;
+        height: 100px;
+    }
+
+    .profile-item {
+        color: var(--text-color);
+        font-family: var(--open-sans-font);
+        font-size: 12px;
+    }
+    
+    .certificate-item {
+        height: auto;
+        width: 250px;
+        padding: 10px;
+    }
+    
+    .btn.btn-dark.button-up {
+        height: 30px;
+        width: 30px;
+        bottom: 25px;
+        right: 30px;
+    }
+
+    #button-up {
+        width: 15px;
+        height: 15px;
+    }
 }
 
 /* hobbies section */
