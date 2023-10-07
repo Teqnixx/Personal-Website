@@ -79,6 +79,21 @@
     margin: 0;
     font-family: var(--oswald-font);
     font-size: 24px;
+    transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+}
+
+.navigation-link::after {
+    content: '';
+    display: block;
+    position: relative;
+    background-color: white;
+    width: 0;
+    height: 3px !important;
+    transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+}
+
+.navigation-link:hover::after {
+    width: 100%;
 }
 
 .button-container {
@@ -141,14 +156,14 @@ path:nth-child(6) {
 
 /* back to top button */
 .btn.btn-dark.button-up {
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     z-index: 99;
     bottom: 50px;
     right: 60px;
     outline: none;
-    display: none;
     height: 60px;
     width: 60px;
     overflow: hidden;
